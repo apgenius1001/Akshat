@@ -13,6 +13,7 @@ void removeDuplicates(std::string& s)
         cout << *it << prev << endl;;
         if(prev != *it) {
             converted.push_back(*it);
+            //converted += *it;
         }
         prev = *it;
     }
