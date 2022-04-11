@@ -28,3 +28,30 @@ int main()
     return 0;
 }
 
+#if 0
+int removeduplicates(std::string& nums)
+{
+    std::sort(nums.begin(), nums.end());
+    std::cout << nums << std::endl;
+
+    auto last = std::unique(nums.begin(), nums.end());
+    
+    std::cout << nums << std::endl;
+    
+    nums.resize(std::distance(nums.begin(), last));
+    std::cout << nums << std::endl;
+    
+    return nums.size();
+}
+
+int main()
+{
+    std::string v = "abcddeeaabbefzeerr";
+    
+    int num = removeduplicates(v);
+    
+    std::cout << num << std::endl;
+
+    return 0;
+}
+#endif
